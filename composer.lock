@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7fc87b1dbbdd04c7d3380aad74e305ea",
+    "content-hash": "d72a5bb7040f73324981aea38943d480",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3620,6 +3620,85 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/profile"
             }
+        },
+        {
+            "name": "drupal/redhen",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/redhen",
+                "reference": "365c526fa0b606fb361f56d1568c176192a1b1a6"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/entity": "*",
+                "drupal/redhen_contact": "*",
+                "drupal/redhen_org": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha3+7-dev",
+                    "datestamp": "1527282480",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Boggs",
+                    "homepage": "https://www.drupal.org/user/153069"
+                },
+                {
+                    "name": "gcb",
+                    "homepage": "https://www.drupal.org/user/1682976"
+                },
+                {
+                    "name": "levelos",
+                    "homepage": "https://www.drupal.org/user/54135"
+                },
+                {
+                    "name": "mariacha1",
+                    "homepage": "https://www.drupal.org/user/2210776"
+                },
+                {
+                    "name": "nrackleff",
+                    "homepage": "https://www.drupal.org/user/463332"
+                },
+                {
+                    "name": "ruscoe",
+                    "homepage": "https://www.drupal.org/user/2722087"
+                },
+                {
+                    "name": "tauno",
+                    "homepage": "https://www.drupal.org/user/105595"
+                },
+                {
+                    "name": "wxactly",
+                    "homepage": "https://www.drupal.org/user/3181097"
+                }
+            ],
+            "description": "RedHen CRM",
+            "homepage": "https://www.drupal.org/project/redhen",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/redhen",
+                "issues": "https://drupal.org/project/issues/redhen"
+            },
+            "time": "2018-06-05T17:56:51+00:00"
         },
         {
             "name": "drupal/redirect",
@@ -9361,6 +9440,7 @@
         "drupal/inline_entity_form": 5,
         "drupal/name": 5,
         "drupal/profile": 5,
+        "drupal/redhen": 20,
         "drupal/require_on_publish": 10
     },
     "prefer-stable": true,

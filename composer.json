@@ -39,6 +39,7 @@
         "drupal/paragraphs": "^1.3",
         "drupal/pathauto": "^1.2",
         "drupal/profile": "^1.0@RC",
+        "drupal/redhen": "dev-1.x",
         "drupal/redirect": "^1.2",
         "drupal/require_on_publish": "^1.0@beta",
         "drush/drush": "~9.3.0",
