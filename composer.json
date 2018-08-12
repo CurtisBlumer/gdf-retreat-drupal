@@ -21,6 +21,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/address": "^1.4",
         "drupal/auto_entitylabel": "2.x-dev",
+        "drupal/bootstrap": "^3.12",
         "drupal/console": "^1.8",
         "drupal/core": "~8.5.6",
         "drupal/daterange_compact": "^1.0@dev",
