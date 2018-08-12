@@ -42,6 +42,7 @@
         "drupal/pathauto": "^1.2",
         "drupal/personas": "^1.0@beta",
         "drupal/profile": "^1.0@RC",
+        "drupal/radix_layouts": "^4.0",
         "drupal/redhen": "dev-1.x",
         "drupal/redirect": "^1.2",
         "drupal/require_on_publish": "^1.0@beta",
