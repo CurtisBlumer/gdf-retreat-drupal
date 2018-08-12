@@ -2,7 +2,7 @@
     "name": "curtapedia/gdf-retreat-drupal",
     "description": "Composer-based Drupal 8 project for GDF Wellness Retreat",
     "type": "project",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Curtis Blumer",
@@ -20,9 +20,10 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/address": "^1.4",
+        "drupal/auto_entitylabel": "2.x-dev",
         "drupal/console": "^1.8",
         "drupal/core": "~8.5.6",
-        "drupal/daterange_compact": "1.x-dev",
+        "drupal/daterange_compact": "^1.0@dev",
         "drupal/geocoder": "^2.0@beta",
         "drupal/geocoder_ajax_prepopulate": "^1.0@beta",
         "drupal/geofield": "^1.0@beta",
@@ -81,6 +82,11 @@
         ]
     },
     "extra": {
+        "patches": {
+            "drupal/auto_entitylabel": {
+                "Fix title displaying as %AutoEntityLabel% after saving via Inline Entity Form": "https://www.drupal.org/files/issues/Title_displayed_as_AutoEntityLabel_after_saving_via_Inline_Entity_Form-2905230-6.patch"
+            }
+        },
         "installer-paths": {
             "web/core": [
                 "type:drupal-core"
