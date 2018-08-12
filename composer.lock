@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d72a5bb7040f73324981aea38943d480",
+    "content-hash": "cce945409e594f0db99fad5825f8f521",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3551,6 +3551,53 @@
             "homepage": "https://www.drupal.org/project/pathauto",
             "support": {
                 "source": "http://cgit.drupalcode.org/pathauto"
+            }
+        },
+        {
+            "name": "drupal/personas",
+            "version": "1.0.0-beta4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/personas",
+                "reference": "8.x-1.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/personas-8.x-1.0-beta4.zip",
+                "reference": "8.x-1.0-beta4",
+                "shasum": "2550525f5be4f9a6cd107d4eeb794813acfe9231"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta4",
+                    "datestamp": "1490380383",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "gabesullice",
+                    "homepage": "https://www.drupal.org/user/2287430"
+                }
+            ],
+            "description": "Personas provides an abstraction on top of Drupal's role system. It promotes best practices and simplifies permissions management.",
+            "homepage": "https://www.drupal.org/project/personas",
+            "support": {
+                "source": "http://cgit.drupalcode.org/personas"
             }
         },
         {
@@ -9439,6 +9486,7 @@
         "drupal/group": 5,
         "drupal/inline_entity_form": 5,
         "drupal/name": 5,
+        "drupal/personas": 10,
         "drupal/profile": 5,
         "drupal/redhen": 20,
         "drupal/require_on_publish": 10
