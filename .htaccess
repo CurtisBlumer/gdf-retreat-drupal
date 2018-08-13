@@ -8,6 +8,11 @@
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  # Proxy requests to web/ without revealing we're located in a subdirectory.
+  RewriteRule ^$ web/$1 [L]
+  RewriteCond %{REQUEST_URI} !^/web/
+  RewriteRule ^(.*)$ web/$1 [L]
+
   # Redirect to https:// if we were accessed via http://.
   RewriteCond %{HTTPS} !=on
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
@@ -24,9 +29,4 @@
   RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
   #RewriteBase /
-
-  # Proxy requests to web/ without revealing we're located in a subdirectory.
-  RewriteRule ^$ web/$1 [L]
-  RewriteCond %{REQUEST_URI} !^/web/
-  RewriteRule ^(.*)$ web/$1 [L]
 </IfModule>
