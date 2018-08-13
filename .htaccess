@@ -25,5 +25,5 @@
   # Proxy requests to web/ without revealing we're located in a subdirectory.
   #RewriteRule ^$ web/$1 [L]
   #RewriteCond %{REQUEST_URI} !^/web/
-  RewriteRule "^/(.*)$" "web/$1" [L]
+  RewriteRule "^(.*)$" "web/$1" [L]
 </IfModule>
