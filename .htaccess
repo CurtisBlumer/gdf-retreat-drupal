@@ -15,7 +15,7 @@
   # Proxy requests to web/ without revealing we're located in a subdirectory.
   RewriteRule ^$ web/$1 [L]
   #RewriteCond %{REQUEST_URI} !^/web/
-  #RewriteRule ^(.*)$ web/$1 [L]
+  RewriteRule ^(.*)$ web/$1 [L]
 
   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
   # VirtualDocumentRoot and the rewrite rules are not working properly.
