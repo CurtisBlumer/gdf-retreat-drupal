@@ -1,10 +1,122 @@
 RewriteEngine On
-RewriteBase /
+
+# Force HTTPS
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP_HOST} ^ehok.org$
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+#RewriteBase /
 #RewriteCond %{REQUEST_URI} !^/web/
 #RewriteCond %{HTTP_HOST} ^(www\.)?myweb\.
 #RewriteRule ^(.*)$ /web/$1 [L]
 
 RewriteRule ^$ web/$1 [L]
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
+# Included below.
+#RewriteCond %{REQUEST_FILENAME} !-d
+# Included below.
+#RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ web/$1 [L]
+
+# Rewrite rules from the htaccess file included with Drupal 8.
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  # Set "protossl" to "s" if we were accessed via https://. This is used later
+  # if you enable "www." stripping or enforcement, in order to ensure that
+  # you don't bounce between http and https.
+  RewriteRule ^ - [E=protossl]
+  RewriteCond %{HTTPS} on
+  RewriteRule ^ - [E=protossl:s]
+
+  # Make sure Authorization HTTP header is available to PHP even when running
+  # as CGI or FastCGI.
+  RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+  # Block access to "hidden" directories whose names begin with a period. This
+  # includes directories used by version control systems such as Subversion or
+  # Git to store control files. Files whose names begin with a period, as well
+  # as the control files used by CVS, are protected by the FilesMatch directive
+  # above.
+  RewriteRule "/\.|^\.(?!well-known/)" - [F]
+
+  # To redirect all users to access the site WITHOUT the 'www.' prefix,
+  # (http://www.example.com/foo will be redirected to http://example.com/foo)
+  # uncomment the following:
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+
+  # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
+  # VirtualDocumentRoot and the rewrite rules are not working properly.
+  # For example if your site is at http://example.com/drupal uncomment and
+  # modify the following line:
+  # RewriteBase /web
+  #
+  # If your site is running in a VirtualDocumentRoot at http://example.com/,
+  # uncomment the following line:
+  # RewriteBase /
+
+  # Redirect common PHP files to their new locations.
+  RewriteCond %{REQUEST_URI} ^(.*)?/(install.php) [OR]
+  RewriteCond %{REQUEST_URI} ^(.*)?/(rebuild.php)
+  RewriteCond %{REQUEST_URI} !core
+  RewriteRule ^ %1/core/%2 [L,QSA,R=301]
+
+  # Rewrite install.php during installation to see if mod_rewrite is working
+  RewriteRule ^core/install.php core/install.php?rewrite=ok [QSA,L]
+
+  # Pass all requests not referring directly to files in the filesystem to
+  # index.php.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !=/favicon.ico
+  RewriteRule ^ index.php [L]
+
+  # For security reasons, deny access to other PHP files on public sites.
+  # Note: The following URI conditions are not anchored at the start (^),
+  # because Drupal may be located in a subdirectory. To further improve
+  # security, you can replace '!/' with '!^/'.
+  # Allow access to PHP files in /core (like authorize.php or install.php):
+  RewriteCond %{REQUEST_URI} !/core/[^/]*\.php$
+  # Allow access to test-specific PHP files:
+  RewriteCond %{REQUEST_URI} !/core/modules/system/tests/https?.php
+  # Allow access to Statistics module's custom front controller.
+  # Copy and adapt this rule to directly execute PHP files in contributed or
+  # custom modules or to run another PHP application in the same directory.
+  RewriteCond %{REQUEST_URI} !/core/modules/statistics/statistics.php$
+  # Deny access to any other PHP files that do not match the rules above.
+  # Specifically, disallow autoload.php from being served directly.
+  RewriteRule "^(.+/.*|autoload)\.php($|/)" - [F]
+
+  # Rules to correctly serve gzip compressed CSS and JS files.
+  # Requires both mod_rewrite and mod_headers to be enabled.
+  <IfModule mod_headers.c>
+    # Serve gzip compressed CSS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.css $1\.css\.gz [QSA]
+
+    # Serve gzip compressed JS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.js $1\.js\.gz [QSA]
+
+    # Serve correct content types, and prevent mod_deflate double gzip.
+    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1]
+    RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1]
+
+    <FilesMatch "(\.js\.gz|\.css\.gz)$">
+      # Serve correct encoding type.
+      Header set Content-Encoding gzip
+      # Force proxies to cache gzipped & non-gzipped css/js files separately.
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+  </IfModule>
+</IfModule>
+
+# Various header fixes.
+<IfModule mod_headers.c>
+  # Disable content sniffing, since it's an attack vector.
+  Header always set X-Content-Type-Options nosniff
+  # Disable Proxy header, since it's an attack vector.
+  RequestHeader unset Proxy
+</IfModule>
