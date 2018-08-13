@@ -10,6 +10,12 @@
 #RewriteCond %{HTTP_HOST} ^(www\.)?myweb\.
 #RewriteRule ^(.*)$ /web/$1 [L]
 
+# Modify environment variables sent to PHP.
+<IfModule mod_env.c>
+  # Set the timezone to Central Time.
+  SetEnv TZ America/Chicago
+</IfModule>
+
 # Rewrite rules from the htaccess file included with Drupal 8.
 <IfModule mod_rewrite.c>
   RewriteEngine on
