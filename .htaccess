@@ -14,6 +14,10 @@
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  # Proxy requests to web/ without revealing we're located in a subdirectory.
+  RewriteRule ^$ web/$1 [L]
+  RewriteRule ^(.*)$ web/$1 [L]
+
   # Set "protossl" to "s" if we were accessed via https://. This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
@@ -41,10 +45,6 @@
   # as the control files used by CVS, are protected by the FilesMatch directive
   # above.
   RewriteRule "/\.|^\.(?!well-known/)" - [F]
-
-  # Proxy requests to web/ without revealing we're located in a subdirectory.
-  RewriteRule ^$ web/$1 [L]
-  RewriteRule ^(.*)$ web/$1 [L]
 
   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
   # VirtualDocumentRoot and the rewrite rules are not working properly.
