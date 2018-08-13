@@ -23,7 +23,7 @@
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
-  RewriteBase /
+  #RewriteBase /
 
   # Proxy requests to web/ without revealing we're located in a subdirectory.
   RewriteRule ^$ web/$1 [L]
