@@ -1,4 +1,4 @@
-RewriteEngine On
+#RewriteEngine On
 
 # Force HTTPS
 #RewriteCond %{HTTPS} off
@@ -10,13 +10,6 @@ RewriteEngine On
 #RewriteCond %{HTTP_HOST} ^(www\.)?myweb\.
 #RewriteRule ^(.*)$ /web/$1 [L]
 
-RewriteRule ^$ web/$1 [L]
-# Included below.
-#RewriteCond %{REQUEST_FILENAME} !-d
-# Included below.
-#RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ web/$1 [L]
-
 # Rewrite rules from the htaccess file included with Drupal 8.
 <IfModule mod_rewrite.c>
   RewriteEngine on
@@ -24,6 +17,10 @@ RewriteRule ^(.*)$ web/$1 [L]
   # Redirect to https:// if we were accessed via http://.
   RewriteCond %{HTTPS} !=on
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Proxy requests to web/ without revealing we're located in a subdirectory.
+  RewriteRule ^$ web/$1 [L]
+  RewriteRule ^(.*)$ web/$1 [L]
 
   # Set "protossl" to "s" if we were accessed via https://. This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
