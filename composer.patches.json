@@ -1,0 +1,10 @@
+{
+    "patches": {
+        "drupal/auto_entitylabel": {
+            "Fix title displaying as %AutoEntityLabel% after saving via Inline Entity Form": "https://www.drupal.org/files/issues/Title_displayed_as_AutoEntityLabel_after_saving_via_Inline_Entity_Form-2905230-6.patch"
+        },
+        "drupal/redhen": {
+            "Contact canonical pages no longer work after updating Drupal core to 8.5.x": "https://www.drupal.org/files/issues/2018-04-15/contact-canonical-2961255-1.patch"
+        }
+    }
+}

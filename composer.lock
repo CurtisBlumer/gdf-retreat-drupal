@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99141c174a6df1ef5789fd33a7596cf1",
+    "content-hash": "bec1ef5ba9479b1685f0c5d261680dfa",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3867,6 +3867,9 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Contact canonical pages no longer work after updating Drupal core to 8.5.x": "https://www.drupal.org/files/issues/2018-04-15/contact-canonical-2961255-1.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
