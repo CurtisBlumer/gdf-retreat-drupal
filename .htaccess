@@ -21,6 +21,10 @@ RewriteRule ^(.*)$ web/$1 [L]
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  # Redirect to https:// if we were accessed via http://.
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
   # Set "protossl" to "s" if we were accessed via https://. This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
