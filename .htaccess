@@ -9,21 +9,22 @@
   RewriteEngine on
 
   # If `https://` and no `www` prefix, passthrough without re-writing.
-  RewriteCond %{HTTPS} on
-  RewriteCond %{HTTP_HOST} !^www\. [NC]
-  RewriteRule ^ -
+  RewriteCond %{HTTPS}        on
+  RewriteCond %{HTTP_HOST}    !^www\. [NC]
+  RewriteRule ^               - [S=2]
 
   # If `http://` and no `www` prefix, re-write to `https://`.
-  RewriteCond %{HTTPS} !on
-  RewriteCond %{HTTP_HOST} !^www\. [NC]
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301]
+  RewriteCond %{HTTPS}        !on
+  RewriteCond %{HTTP_HOST}    !^www\. [NC]
+  RewriteRule ^               https://%{HTTP_HOST}%{REQUEST_URI} [R=301,S=1]
 
   # If `http://` and `www` prefix, re-write to `https://` and strip `www`.
-  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ https://%1%{REQUEST_URI} [R=301]
+  RewriteCond %{HTTP_HOST}    ^www\.(.+)$ [NC]
+  RewriteRule ^               https://%1%{REQUEST_URI} [R=301]
 
   # Proxy requests to web/ without revealing we're located in a subdirectory.
-  #RewriteRule ^$ web/$1 [L]
-  #RewriteCond %{REQUEST_URI} !^/web/
-  RewriteRule "^(.*)$" "web/$1" [L]
+  RewriteRule ^$              web/$1 [L]
+
+  RewriteCond %{REQUEST_URI}  !^/web/?
+  RewriteRule ^(.*)$          web/$1 [L]
 </IfModule>
