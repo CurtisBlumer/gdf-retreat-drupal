@@ -33,6 +33,8 @@
         "drupal/geofield_map": "^2.10",
         "drupal/group": "^1.0@RC",
         "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/leaflet": "^1.0@beta",
+        "drupal/leaflet_markercluster": "^1.0@alpha",
         "drupal/media_responsive_thumbnail": "^1.0",
         "drupal/migrate_plus": "^2.0",
         "drupal/migrate_source_csv": "^2.2",
