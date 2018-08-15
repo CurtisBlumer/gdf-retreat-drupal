@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "54dfa01cf442783e25beddf4dfec73c3",
+    "content-hash": "41fbc164269a2911f51e1495520b7469",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3325,17 +3325,11 @@
         },
         {
             "name": "drupal/leaflet_markercluster",
-            "version": "1.0.0-alpha2",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/leaflet_markercluster",
-                "reference": "8.x-1.0-alpha2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/leaflet_markercluster-8.x-1.0-alpha2.zip",
-                "reference": "8.x-1.0-alpha2",
-                "shasum": "b3a21debe5ee38d3395ab49cb1a6ac53694db26f"
+                "reference": "929377e4736e383a25e7b068c01f9beb0f375fc9"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -3347,11 +3341,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha2",
-                    "datestamp": "1456186439",
+                    "version": "8.x-1.0-alpha2+1-dev",
+                    "datestamp": "1475226839",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -3373,7 +3367,8 @@
             "homepage": "https://www.drupal.org/project/leaflet_markercluster",
             "support": {
                 "source": "http://cgit.drupalcode.org/leaflet_markercluster"
-            }
+            },
+            "time": "2016-09-30T09:09:20+00:00"
         },
         {
             "name": "drupal/media_responsive_thumbnail",
@@ -9787,7 +9782,7 @@
         "drupal/group": 5,
         "drupal/inline_entity_form": 5,
         "drupal/leaflet": 10,
-        "drupal/leaflet_markercluster": 15,
+        "drupal/leaflet_markercluster": 20,
         "drupal/name": 5,
         "drupal/personas": 10,
         "drupal/profile": 5,
