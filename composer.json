@@ -24,6 +24,7 @@
         "drupal/bootstrap": "^3.12",
         "drupal/bootstrap_layouts": "^5.0",
         "drupal/charts": "^3.0@beta",
+        "drupal/conditional_fields": "^1.0@alpha",
         "drupal/console": "^1.8",
         "drupal/core": "~8.5.6",
         "drupal/daterange_compact": "^1.0@dev",
