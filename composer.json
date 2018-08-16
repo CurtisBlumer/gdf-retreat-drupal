@@ -51,6 +51,7 @@
         "drupal/redhen": "dev-1.x",
         "drupal/redirect": "^1.2",
         "drupal/require_on_publish": "^1.0@beta",
+        "drupal/reverse_entity_reference": "dev-2.x",
         "drupal/simple_timeline": "^1.1",
         "drush/drush": "~9.3.0",
         "vlucas/phpdotenv": "^2.5",

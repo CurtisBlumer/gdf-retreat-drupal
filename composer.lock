@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a21baa469a592257c7232837a9677622",
+    "content-hash": "50daf1221a1b2155a57a132265b96c66",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2772,6 +2772,65 @@
             "time": "2018-04-10T03:15:04+00:00"
         },
         {
+            "name": "drupal/dynamic_entity_reference",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/dynamic_entity_reference",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/dynamic_entity_reference-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "cb41d7b259ee91d030166dab82bebd841df6d390"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1516093086",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Lee Rowlands",
+                    "homepage": "https://www.drupal.org/u/larowlan",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Jibran Ijaz",
+                    "homepage": "https://www.drupal.org/u/jibran",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "Provides a field that allows an entity-reference field to reference more than one entity type.",
+            "homepage": "http://drupal.org/project/dynamic_entity_reference",
+            "support": {
+                "source": "http://cgit.drupalcode.org/dynamic_entity_reference",
+                "issues": "http://drupal.org/project/dynamic_entity_reference",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/entity",
             "version": "1.0.0-beta4",
             "source": {
@@ -4462,6 +4521,49 @@
                 "source": "http://cgit.drupalcode.org/require_on_publish",
                 "issues": "https://www.drupal.org/project/issues/require_on_publish"
             }
+        },
+        {
+            "name": "drupal/reverse_entity_reference",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/reverse_entity_reference",
+                "reference": "dfa5300e3cfb4a0cdc4939872b3cbe5b67c99833"
+            },
+            "require": {
+                "drupal/core": "^8.4",
+                "drupal/dynamic_entity_reference": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.7-rc2+15-dev",
+                    "datestamp": "1533596280",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "GeraldNDA",
+                    "homepage": "https://www.drupal.org/user/3513746"
+                }
+            ],
+            "description": "Provide a back reference to all the entities that are referencing the current entity",
+            "homepage": "https://www.drupal.org/project/reverse_entity_reference",
+            "support": {
+                "source": "http://cgit.drupalcode.org/reverse_entity_reference"
+            },
+            "time": "2018-08-07T00:49:02+00:00"
         },
         {
             "name": "drupal/simple_timeline",
@@ -10200,7 +10302,8 @@
         "drupal/personas": 10,
         "drupal/profile": 5,
         "drupal/redhen": 20,
-        "drupal/require_on_publish": 10
+        "drupal/require_on_publish": 10,
+        "drupal/reverse_entity_reference": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
