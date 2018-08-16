@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41fbc164269a2911f51e1495520b7469",
+    "content-hash": "6dbe1b0ed8967d0c0e1e4d3dff6f3d1f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1264,6 +1264,85 @@
             "time": "2018-07-12T21:16:12+00:00"
         },
         {
+            "name": "doctrine/dbal",
+            "version": "v2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "5140a64c08b4b607b9bedaae0cedd26f04a0e621"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/5140a64c08b4b607b9bedaae0cedd26f04a0e621",
+                "reference": "5140a64c08b4b607b9bedaae0cedd26f04a0e621",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "ext-pdo": "*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^4.0",
+                "jetbrains/phpstorm-stubs": "^2018.1.2",
+                "phpstan/phpstan": "^0.10.1",
+                "phpunit/phpunit": "^7.1.2",
+                "phpunit/phpunit-mock-objects": "!=3.2.4,!=3.2.5",
+                "symfony/console": "^2.0.5|^3.0|^4.0",
+                "symfony/phpunit-bridge": "^3.4.5|^4.0.5"
+            },
+            "suggest": {
+                "symfony/console": "For helpful console commands such as SQL execution and import of files."
+            },
+            "bin": [
+                "bin/doctrine-dbal"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8.x-dev",
+                    "dev-develop": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\DBAL\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Database Abstraction Layer",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "dbal",
+                "persistence",
+                "queryobject"
+            ],
+            "time": "2018-07-13T03:16:35+00:00"
+        },
+        {
             "name": "doctrine/event-manager",
             "version": "v1.0.0",
             "source": {
@@ -1893,6 +1972,73 @@
             }
         },
         {
+            "name": "drupal/charts",
+            "version": "3.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/charts",
+                "reference": "8.x-3.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/charts-8.x-3.0-beta1.zip",
+                "reference": "8.x-3.0-beta1",
+                "shasum": "c6404f23b6683c64f84b7ae5f34e5529168f46bc"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-beta1",
+                    "datestamp": "1531880324",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre.Vriens",
+                    "homepage": "https://www.drupal.org/user/1689304"
+                },
+                {
+                    "name": "andileco",
+                    "homepage": "https://www.drupal.org/user/2054544"
+                },
+                {
+                    "name": "brmassa",
+                    "homepage": "https://www.drupal.org/user/67164"
+                },
+                {
+                    "name": "kenorb",
+                    "homepage": "https://www.drupal.org/user/191974"
+                },
+                {
+                    "name": "quicksketch",
+                    "homepage": "https://www.drupal.org/user/35821"
+                },
+                {
+                    "name": "rashad612",
+                    "homepage": "https://www.drupal.org/user/319686"
+                }
+            ],
+            "description": "A charting API for Drupal that provides chart elements and integration with Views.",
+            "homepage": "https://www.drupal.org/project/charts",
+            "support": {
+                "source": "http://cgit.drupalcode.org/charts"
+            }
+        },
+        {
             "name": "drupal/console",
             "version": "1.8.0",
             "source": {
@@ -2519,6 +2665,50 @@
             "time": "2017-06-12T21:30:07+00:00"
         },
         {
+            "name": "drupal/dbal",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/dbal",
+                "reference": "57375c05d6fbe4e2b3528a39ae4c90971b4152c8"
+            },
+            "require": {
+                "doctrine/dbal": "^2.5",
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0+0-dev",
+                    "datestamp": "1523330284",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL2+"
+            ],
+            "authors": [
+                {
+                    "name": "Lee Rowlands",
+                    "homepage": "https://www.drupal.org/user/395439",
+                    "email": "lee.rowlands@previousnext.com.au"
+                }
+            ],
+            "description": "Provides a Doctrine/DBAL connection from your Database connection settings.",
+            "homepage": "https://www.drupal.org/project/dbal",
+            "support": {
+                "source": "http://cgit.drupalcode.org/dbal"
+            },
+            "time": "2018-04-10T03:15:04+00:00"
+        },
+        {
             "name": "drupal/entity",
             "version": "1.0.0-beta4",
             "source": {
@@ -2718,6 +2908,67 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/entity_browser_enhanced",
                 "issues": "https://www.drupal.org/project/issues/entity_browser_enhanced"
+            }
+        },
+        {
+            "name": "drupal/entity_hierarchy",
+            "version": "2.0.0-alpha38",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_hierarchy",
+                "reference": "8.x-2.0-alpha38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_hierarchy-8.x-2.0-alpha38.zip",
+                "reference": "8.x-2.0-alpha38",
+                "shasum": "dc26265ee46f31a5be044be707274b3fd3cc4400"
+            },
+            "require": {
+                "drupal/core": "^8.4",
+                "drupal/dbal": "dev-1.x",
+                "previousnext/nested-set": "^0.1.1"
+            },
+            "require-dev": {
+                "drupal/workbench_access": "*",
+                "drupal/workbench_moderation": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-alpha38",
+                    "datestamp": "1518486184",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL2+"
+            ],
+            "authors": [
+                {
+                    "name": "jibran",
+                    "homepage": "https://www.drupal.org/user/1198144"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "webdrips",
+                    "homepage": "https://www.drupal.org/user/164950"
+                }
+            ],
+            "description": "A module to extend entity-reference fields so that a hierarchy is maintained.",
+            "homepage": "https://www.drupal.org/project/entity_hierarchy",
+            "support": {
+                "source": "http://cgit.drupalcode.org/entity_hierarchy"
             }
         },
         {
@@ -4150,6 +4401,61 @@
             }
         },
         {
+            "name": "drupal/simple_timeline",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/simple_timeline",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/simple_timeline-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "3db0ab6ad3bc49d070c28f4067a69e085ad2e551"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1494216489",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "alansaviolobo",
+                    "homepage": "https://www.drupal.org/user/2190830"
+                },
+                {
+                    "name": "flocondetoile",
+                    "homepage": "https://www.drupal.org/user/2006064"
+                }
+            ],
+            "description": "Provide a views style for displaying content in a vertical timeline",
+            "homepage": "https://www.drupal.org/project/simple_timeline",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/simple_timeline",
+                "issues": "https://www.drupal.org/project/issues/simple_timeline"
+            }
+        },
+        {
             "name": "drupal/token",
             "version": "1.3.0",
             "source": {
@@ -5183,6 +5489,47 @@
             "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
             "homepage": "https://github.com/phayes/geoPHP",
             "time": "2014-12-02T06:11:22+00:00"
+        },
+        {
+            "name": "previousnext/nested-set",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/previousnext/nested-set.git",
+                "reference": "d471ba1cab04066d33ff7a76ba616f8afb873570"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/previousnext/nested-set/zipball/d471ba1cab04066d33ff7a76ba616f8afb873570",
+                "reference": "d471ba1cab04066d33ff7a76ba616f8afb873570",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "~2.5"
+            },
+            "require-dev": {
+                "drupal/coder": "~8.0",
+                "pear/console_table": "^1.3",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PNX\\NestedSet\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Kim Pepper",
+                    "email": "kim@pepper.id.au"
+                }
+            ],
+            "description": "A PHP Doctrine DBAL implementation for Nested Sets.",
+            "time": "2017-08-16T10:05:11+00:00"
         },
         {
             "name": "psr/container",
@@ -9774,8 +10121,10 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/auto_entitylabel": 20,
+        "drupal/charts": 10,
         "drupal/daterange_compact": 20,
         "drupal/entity_browser_enhanced": 5,
+        "drupal/entity_hierarchy": 15,
         "drupal/geocoder": 10,
         "drupal/geocoder_ajax_prepopulate": 10,
         "drupal/geofield": 10,
