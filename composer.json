@@ -13,9 +13,15 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "asset-packagist": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     },
     "require": {
+        "bower-asset/jquery-simple-color": "^1.2",
+        "bower-asset/spectrum": "^1.8",
         "composer/installers": "^1.5",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.5",
@@ -55,6 +61,7 @@
         "drupal/reverse_entity_reference": "dev-2.x",
         "drupal/simple_timeline": "^1.1",
         "drush/drush": "~9.3.0",
+        "oomphinc/composer-installers-extender": "^1.1",
         "vlucas/phpdotenv": "^2.5",
         "webflo/drupal-finder": "^1.1",
         "webmozart/path-util": "^2.3"
@@ -108,6 +115,8 @@
                 "type:drupal-library"
             ],
             "web/modules/contrib/{$name}": [
+                "type:bower-asset",
+                "type:npm-asset",
                 "type:drupal-module"
             ],
             "web/profiles/contrib/{$name}": [
@@ -126,6 +135,10 @@
                 ".gitattributes": "../.gitattributes",
                 ".htaccess": "../.htaccess"
             }
-        }
+        },
+        "installer-types": [
+            "npm-asset",
+            "bower-asset"
+        ]
     }
 }
