@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5206d0c45e0d3d81d44ff9a9cd20ef0a",
+    "content-hash": "53aa1079d99135383346544f342b41bf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -177,6 +177,47 @@
             ]
         },
         {
+            "name": "bower-asset/leaflet",
+            "version": "v1.3.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Leaflet/Leaflet.git",
+                "reference": "b22aef4aa71afd640bf8e91915b78899bf64ff89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Leaflet/Leaflet/zipball/b22aef4aa71afd640bf8e91915b78899bf64ff89",
+                "reference": "b22aef4aa71afd640bf8e91915b78899bf64ff89",
+                "shasum": null
+            },
+            "type": "bower-asset",
+            "license": [
+                "BSD-2-Clause"
+            ]
+        },
+        {
+            "name": "bower-asset/leaflet.markercluster",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Leaflet/Leaflet.markercluster.git",
+                "reference": "4cea2dfba189972c7ce06a0ab3cbc9cc8aa0b694"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Leaflet/Leaflet.markercluster/zipball/4cea2dfba189972c7ce06a0ab3cbc9cc8aa0b694",
+                "reference": "4cea2dfba189972c7ce06a0ab3cbc9cc8aa0b694",
+                "shasum": null
+            },
+            "require": {
+                "bower-asset/leaflet": ">=1.0.3"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "bower-asset/spectrum",
             "version": "1.8.0",
             "source": {
@@ -236,16 +277,16 @@
         },
         {
             "name": "commerceguys/addressing",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/addressing.git",
-                "reference": "ef34ba9f6e5378e56cceb9f45798b464878db031"
+                "reference": "de46cb4a002f9014c44cfcb1dcf18df8105e8239"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/ef34ba9f6e5378e56cceb9f45798b464878db031",
-                "reference": "ef34ba9f6e5378e56cceb9f45798b464878db031",
+                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/de46cb4a002f9014c44cfcb1dcf18df8105e8239",
+                "reference": "de46cb4a002f9014c44cfcb1dcf18df8105e8239",
                 "shasum": ""
             },
             "require": {
@@ -291,7 +332,7 @@
                 "localization",
                 "postal"
             ],
-            "time": "2018-05-23T13:00:47+00:00"
+            "time": "2018-08-17T14:27:22+00:00"
         },
         {
             "name": "composer/installers",
@@ -687,16 +728,16 @@
         },
         {
             "name": "consolidation/robo",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/Robo.git",
-                "reference": "ac563abfadf7cb7314b4e152f2b5033a6c255f6f"
+                "reference": "31f2d2562c4e1dcde70f2659eefd59aa9c7f5b2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/Robo/zipball/ac563abfadf7cb7314b4e152f2b5033a6c255f6f",
-                "reference": "ac563abfadf7cb7314b4e152f2b5033a6c255f6f",
+                "url": "https://api.github.com/repos/consolidation/Robo/zipball/31f2d2562c4e1dcde70f2659eefd59aa9c7f5b2d",
+                "reference": "31f2d2562c4e1dcde70f2659eefd59aa9c7f5b2d",
                 "shasum": ""
             },
             "require": {
@@ -704,6 +745,8 @@
                 "consolidation/config": "^1.0.10",
                 "consolidation/log": "~1",
                 "consolidation/output-formatters": "^3.1.13",
+                "consolidation/self-update": "^1",
+                "g1a/composer-test-scenarios": "^2",
                 "grasmash/yaml-expander": "^1.3",
                 "league/container": "^2.2",
                 "php": ">=5.5.0",
@@ -720,7 +763,6 @@
                 "codeception/aspect-mock": "^1|^2.1.1",
                 "codeception/base": "^2.3.7",
                 "codeception/verify": "^0.3.2",
-                "g1a/composer-test-scenarios": "^2",
                 "goaop/framework": "~2.1.2",
                 "goaop/parser-reflection": "^1.1.0",
                 "natxet/cssmin": "3.0.4",
@@ -763,7 +805,50 @@
                 }
             ],
             "description": "Modern task runner",
-            "time": "2018-05-27T01:42:53+00:00"
+            "time": "2018-08-17T18:44:18+00:00"
+        },
+        {
+            "name": "consolidation/self-update",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/consolidation/self-update.git",
+                "reference": "adbb784e58cc0836d8522851f7e38ee7ade0d553"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/consolidation/self-update/zipball/adbb784e58cc0836d8522851f7e38ee7ade0d553",
+                "reference": "adbb784e58cc0836d8522851f7e38ee7ade0d553",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "symfony/console": "^2.8|^3|^4",
+                "symfony/filesystem": "^2.5|^3|^4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SelfUpdate\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Menk",
+                    "email": "menk@mestrona.net"
+                }
+            ],
+            "description": "Provides a self:update command for Symfony Console applications.",
+            "time": "2018-08-17T04:50:59+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -3916,11 +4001,17 @@
         },
         {
             "name": "drupal/leaflet_markercluster",
-            "version": "dev-1.x",
+            "version": "1.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/leaflet_markercluster",
-                "reference": "929377e4736e383a25e7b068c01f9beb0f375fc9"
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/leaflet_markercluster-8.x-1.0-alpha2.zip",
+                "reference": "8.x-1.0-alpha2",
+                "shasum": "b3a21debe5ee38d3395ab49cb1a6ac53694db26f"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -3932,11 +4023,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha2+1-dev",
-                    "datestamp": "1475226839",
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1456186439",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Alpha releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -3958,8 +4049,61 @@
             "homepage": "https://www.drupal.org/project/leaflet_markercluster",
             "support": {
                 "source": "http://cgit.drupalcode.org/leaflet_markercluster"
+            }
+        },
+        {
+            "name": "drupal/leaflet_more_maps",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/leaflet_more_maps",
+                "reference": "8.x-1.0-alpha3"
             },
-            "time": "2016-09-30T09:09:20+00:00"
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/leaflet_more_maps-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "0aa02138eed25efb6d579b2128bbe47a8b149842"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/leaflet": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1473325739",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "RdeBoer",
+                    "homepage": "https://www.drupal.org/user/404007"
+                },
+                {
+                    "name": "rachel_norfolk",
+                    "homepage": "https://www.drupal.org/user/66273"
+                }
+            ],
+            "description": "Adds a swag of map styles to Leaflet, e.g Thunderforest, Esri, Stamen, Google.",
+            "homepage": "https://www.drupal.org/project/leaflet_more_maps",
+            "support": {
+                "source": "http://cgit.drupalcode.org/leaflet_more_maps"
+            }
         },
         {
             "name": "drupal/media_responsive_thumbnail",
@@ -5263,19 +5407,24 @@
             "time": "2017-02-03T22:48:59+00:00"
         },
         {
-            "name": "enyo/dropzone",
-            "version": "v5.1.1",
+            "name": "g1a/composer-test-scenarios",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/enyo/dropzone.git",
-                "reference": "7d0792d1346d83a8b0c0d2919121bdd2b8e7fee4"
+                "url": "https://github.com/g1a/composer-test-scenarios.git",
+                "reference": "a166fd15191aceab89f30c097e694b7cf3db4880"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enyo/dropzone/zipball/7d0792d1346d83a8b0c0d2919121bdd2b8e7fee4",
-                "reference": "7d0792d1346d83a8b0c0d2919121bdd2b8e7fee4",
+                "url": "https://api.github.com/repos/g1a/composer-test-scenarios/zipball/a166fd15191aceab89f30c097e694b7cf3db4880",
+                "reference": "a166fd15191aceab89f30c097e694b7cf3db4880",
                 "shasum": ""
             },
+            "bin": [
+                "scripts/create-scenario",
+                "scripts/dependency-licenses",
+                "scripts/install-scenario"
+            ],
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5283,20 +5432,12 @@
             ],
             "authors": [
                 {
-                    "name": "Matias Meno",
-                    "email": "m@tias.me",
-                    "homepage": "http://www.matiasmeno.com"
+                    "name": "Greg Anderson",
+                    "email": "greg.1.anderson@greenknowe.org"
                 }
             ],
-            "description": "Handles drag and drop of files for you.",
-            "homepage": "http://www.dropzonejs.com",
-            "keywords": [
-                "drag and drop",
-                "dragndrop",
-                "file upload",
-                "upload"
-            ],
-            "time": "2017-06-20T13:39:37+00:00"
+            "description": "Useful scripts for testing multiple sets of Composer dependencies.",
+            "time": "2018-08-08T23:37:23+00:00"
         },
         {
             "name": "grasmash/expander",
@@ -10657,7 +10798,7 @@
         "drupal/group": 5,
         "drupal/inline_entity_form": 5,
         "drupal/leaflet": 10,
-        "drupal/leaflet_markercluster": 20,
+        "drupal/leaflet_more_maps": 15,
         "drupal/name": 5,
         "drupal/page_manager": 10,
         "drupal/personas": 10,

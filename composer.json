@@ -20,8 +20,9 @@
         }
     },
     "require": {
-        "bower-asset/dropzone": "^5.5",
+        "bower-asset/dropzone": "^5.1.1",
         "bower-asset/jquery-simple-color": "^1.2",
+        "bower-asset/leaflet.markercluster": "^1.3",
         "bower-asset/spectrum": "^1.8",
         "composer/installers": "^1.5",
         "cweagans/composer-patches": "^1.6",
@@ -46,7 +47,8 @@
         "drupal/group": "^1.0@RC",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/leaflet": "^1.0@beta",
-        "drupal/leaflet_markercluster": "1.x-dev",
+        "drupal/leaflet_markercluster": "~1.0",
+        "drupal/leaflet_more_maps": "^1.0@alpha",
         "drupal/media_responsive_thumbnail": "^1.0",
         "drupal/migrate_plus": "^2.0",
         "drupal/migrate_source_csv": "^2.2",
@@ -64,10 +66,8 @@
         "drupal/reverse_entity_reference": "dev-2.x",
         "drupal/simple_timeline": "^1.1",
         "drush/drush": "~9.3.0",
-        "enyo/dropzone": "^5.1",
         "oomphinc/composer-installers-extender": "^1.1",
         "vlucas/phpdotenv": "^2.5",
-        "webflo/drupal-finder": "^1.1",
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
@@ -116,11 +116,11 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "web/modules/contrib/{$name}": [
-                "type:bower-asset",
-                "type:npm-asset",
                 "type:drupal-module"
             ],
             "web/profiles/contrib/{$name}": [
@@ -141,8 +141,8 @@
             }
         },
         "installer-types": [
-            "npm-asset",
-            "bower-asset"
+            "bower-asset",
+            "npm-asset"
         ]
     }
 }
