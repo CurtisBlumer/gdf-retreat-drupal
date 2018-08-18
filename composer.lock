@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0035a5a496a97d36228cc44345aa65cc",
+    "content-hash": "e302137768e3110d41ef6c2371576fbe",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -170,47 +170,6 @@
                 "url": "https://api.github.com/repos/recurser/jquery-simple-color/zipball/ebe0b2c0db639584e81499bd29d6619abb9a2599",
                 "reference": "ebe0b2c0db639584e81499bd29d6619abb9a2599",
                 "shasum": null
-            },
-            "type": "bower-asset",
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "bower-asset/leaflet",
-            "version": "v1.3.3",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:Leaflet/Leaflet.git",
-                "reference": "b22aef4aa71afd640bf8e91915b78899bf64ff89"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Leaflet/Leaflet/zipball/b22aef4aa71afd640bf8e91915b78899bf64ff89",
-                "reference": "b22aef4aa71afd640bf8e91915b78899bf64ff89",
-                "shasum": null
-            },
-            "type": "bower-asset",
-            "license": [
-                "BSD-2-Clause"
-            ]
-        },
-        {
-            "name": "bower-asset/leaflet.markercluster",
-            "version": "v0.4.0-patch.1",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:Leaflet/Leaflet.markercluster.git",
-                "reference": "861226facbaade8c86573648240acbed96f2d586"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Leaflet/Leaflet.markercluster/zipball/861226facbaade8c86573648240acbed96f2d586",
-                "reference": "861226facbaade8c86573648240acbed96f2d586",
-                "shasum": null
-            },
-            "require": {
-                "bower-asset/leaflet": ">=0.7.0"
             },
             "type": "bower-asset",
             "license": [
@@ -1422,85 +1381,6 @@
             "time": "2018-07-12T21:16:12+00:00"
         },
         {
-            "name": "doctrine/dbal",
-            "version": "v2.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/dbal.git",
-                "reference": "5140a64c08b4b607b9bedaae0cedd26f04a0e621"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/5140a64c08b4b607b9bedaae0cedd26f04a0e621",
-                "reference": "5140a64c08b4b607b9bedaae0cedd26f04a0e621",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/cache": "^1.0",
-                "doctrine/event-manager": "^1.0",
-                "ext-pdo": "*",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^4.0",
-                "jetbrains/phpstorm-stubs": "^2018.1.2",
-                "phpstan/phpstan": "^0.10.1",
-                "phpunit/phpunit": "^7.1.2",
-                "phpunit/phpunit-mock-objects": "!=3.2.4,!=3.2.5",
-                "symfony/console": "^2.0.5|^3.0|^4.0",
-                "symfony/phpunit-bridge": "^3.4.5|^4.0.5"
-            },
-            "suggest": {
-                "symfony/console": "For helpful console commands such as SQL execution and import of files."
-            },
-            "bin": [
-                "bin/doctrine-dbal"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8.x-dev",
-                    "dev-develop": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\DBAL\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                }
-            ],
-            "description": "Database Abstraction Layer",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "database",
-                "dbal",
-                "persistence",
-                "queryobject"
-            ],
-            "time": "2018-07-13T03:16:35+00:00"
-        },
-        {
             "name": "doctrine/event-manager",
             "version": "v1.0.0",
             "source": {
@@ -2072,61 +1952,6 @@
                 "docs": "https://drupal-bootstrap.org",
                 "issues": "https://www.drupal.org/project/issues/bootstrap",
                 "irc": "irc://irc.freenode.org/drupal-bootstrap"
-            }
-        },
-        {
-            "name": "drupal/bootstrap_layouts",
-            "version": "5.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/bootstrap_layouts",
-                "reference": "8.x-5.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_layouts-8.x-5.1.zip",
-                "reference": "8.x-5.1",
-                "shasum": "b304b1c9d0ea30646e6dff7aa32405a21a11d49f"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-5.x": "5.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-5.1",
-                    "datestamp": "1516598286",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "darol100",
-                    "homepage": "https://www.drupal.org/user/2667123"
-                },
-                {
-                    "name": "hctom",
-                    "homepage": "https://www.drupal.org/user/112790"
-                },
-                {
-                    "name": "markcarver",
-                    "homepage": "https://www.drupal.org/user/501638"
-                }
-            ],
-            "description": "This module is going to generate layouts with Bootstrap grid system.",
-            "homepage": "https://www.drupal.org/project/bootstrap_layouts",
-            "support": {
-                "source": "http://cgit.drupalcode.org/bootstrap_layouts"
             }
         },
         {
@@ -2944,50 +2769,6 @@
             "time": "2017-06-12T21:30:07+00:00"
         },
         {
-            "name": "drupal/dbal",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/dbal",
-                "reference": "57375c05d6fbe4e2b3528a39ae4c90971b4152c8"
-            },
-            "require": {
-                "doctrine/dbal": "^2.5",
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0+0-dev",
-                    "datestamp": "1523330284",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL2+"
-            ],
-            "authors": [
-                {
-                    "name": "Lee Rowlands",
-                    "homepage": "https://www.drupal.org/user/395439",
-                    "email": "lee.rowlands@previousnext.com.au"
-                }
-            ],
-            "description": "Provides a Doctrine/DBAL connection from your Database connection settings.",
-            "homepage": "https://www.drupal.org/project/dbal",
-            "support": {
-                "source": "http://cgit.drupalcode.org/dbal"
-            },
-            "time": "2018-04-10T03:15:04+00:00"
-        },
-        {
             "name": "drupal/dropzonejs",
             "version": "2.0.0-alpha3",
             "source": {
@@ -3134,69 +2915,6 @@
             }
         },
         {
-            "name": "drupal/entity",
-            "version": "1.0.0-beta4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/entity",
-                "reference": "8.x-1.0-beta4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.0-beta4.zip",
-                "reference": "8.x-1.0-beta4",
-                "shasum": "00c1ae1fd4942285564af4325c0c98f895dac754"
-            },
-            "require": {
-                "drupal/core": "~8.5"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-beta4",
-                    "datestamp": "1528452184",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "dawehner",
-                    "homepage": "https://www.drupal.org/user/99340"
-                },
-                {
-                    "name": "dixon_",
-                    "homepage": "https://www.drupal.org/user/239911"
-                },
-                {
-                    "name": "fago",
-                    "homepage": "https://www.drupal.org/user/16747"
-                }
-            ],
-            "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
-            "homepage": "http://drupal.org/project/entity",
-            "support": {
-                "source": "http://cgit.drupalcode.org/entity"
-            }
-        },
-        {
             "name": "drupal/entity_browser",
             "version": "1.5.0",
             "source": {
@@ -3333,67 +3051,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/entity_browser_enhanced",
                 "issues": "https://www.drupal.org/project/issues/entity_browser_enhanced"
-            }
-        },
-        {
-            "name": "drupal/entity_hierarchy",
-            "version": "2.0.0-alpha38",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/entity_hierarchy",
-                "reference": "8.x-2.0-alpha38"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_hierarchy-8.x-2.0-alpha38.zip",
-                "reference": "8.x-2.0-alpha38",
-                "shasum": "dc26265ee46f31a5be044be707274b3fd3cc4400"
-            },
-            "require": {
-                "drupal/core": "^8.4",
-                "drupal/dbal": "dev-1.x",
-                "previousnext/nested-set": "^0.1.1"
-            },
-            "require-dev": {
-                "drupal/workbench_access": "*",
-                "drupal/workbench_moderation": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.0-alpha38",
-                    "datestamp": "1518486184",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL2+"
-            ],
-            "authors": [
-                {
-                    "name": "jibran",
-                    "homepage": "https://www.drupal.org/user/1198144"
-                },
-                {
-                    "name": "larowlan",
-                    "homepage": "https://www.drupal.org/user/395439"
-                },
-                {
-                    "name": "webdrips",
-                    "homepage": "https://www.drupal.org/user/164950"
-                }
-            ],
-            "description": "A module to extend entity-reference fields so that a hierarchy is maintained.",
-            "homepage": "https://www.drupal.org/project/entity_hierarchy",
-            "support": {
-                "source": "http://cgit.drupalcode.org/entity_hierarchy"
             }
         },
         {
@@ -3953,58 +3610,6 @@
             }
         },
         {
-            "name": "drupal/leaflet_markercluster",
-            "version": "1.0.0-alpha2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/leaflet_markercluster",
-                "reference": "8.x-1.0-alpha2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/leaflet_markercluster-8.x-1.0-alpha2.zip",
-                "reference": "8.x-1.0-alpha2",
-                "shasum": "b3a21debe5ee38d3395ab49cb1a6ac53694db26f"
-            },
-            "require": {
-                "drupal/core": "~8.0",
-                "drupal/leaflet": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha2",
-                    "datestamp": "1456186439",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "RdeBoer",
-                    "homepage": "https://www.drupal.org/user/404007"
-                },
-                {
-                    "name": "pvhee",
-                    "homepage": "https://www.drupal.org/user/108811"
-                }
-            ],
-            "description": "Extends Leaflet with the Markercluster library.",
-            "homepage": "https://www.drupal.org/project/leaflet_markercluster",
-            "support": {
-                "source": "http://cgit.drupalcode.org/leaflet_markercluster"
-            }
-        },
-        {
             "name": "drupal/leaflet_more_maps",
             "version": "1.0.0-alpha3",
             "source": {
@@ -4544,121 +4149,6 @@
             "homepage": "https://www.drupal.org/project/pathauto",
             "support": {
                 "source": "http://cgit.drupalcode.org/pathauto"
-            }
-        },
-        {
-            "name": "drupal/personas",
-            "version": "1.0.0-beta4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/personas",
-                "reference": "8.x-1.0-beta4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/personas-8.x-1.0-beta4.zip",
-                "reference": "8.x-1.0-beta4",
-                "shasum": "2550525f5be4f9a6cd107d4eeb794813acfe9231"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-beta4",
-                    "datestamp": "1490380383",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "gabesullice",
-                    "homepage": "https://www.drupal.org/user/2287430"
-                }
-            ],
-            "description": "Personas provides an abstraction on top of Drupal's role system. It promotes best practices and simplifies permissions management.",
-            "homepage": "https://www.drupal.org/project/personas",
-            "support": {
-                "source": "http://cgit.drupalcode.org/personas"
-            }
-        },
-        {
-            "name": "drupal/profile",
-            "version": "1.0.0-rc1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/profile",
-                "reference": "8.x-1.0-rc1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/profile-8.x-1.0-rc1.zip",
-                "reference": "8.x-1.0-rc1",
-                "shasum": "cc537ca25412adc4fa601ff42cf2fb5cbc6e7b6b"
-            },
-            "require": {
-                "drupal/core": "~8.1",
-                "drupal/entity": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-rc1",
-                    "datestamp": "1505830324",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "daggerhart",
-                    "homepage": "https://www.drupal.org/user/167806"
-                },
-                {
-                    "name": "dakala",
-                    "homepage": "https://www.drupal.org/user/53175"
-                },
-                {
-                    "name": "fago",
-                    "homepage": "https://www.drupal.org/user/16747"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "pcambra",
-                    "homepage": "https://www.drupal.org/user/122101"
-                }
-            ],
-            "description": "Provides configurable user profiles.",
-            "homepage": "http://drupal.org/project/profile",
-            "support": {
-                "source": "http://cgit.drupalcode.org/profile"
             }
         },
         {
@@ -6170,47 +5660,6 @@
             "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
             "homepage": "https://github.com/phayes/geoPHP",
             "time": "2014-12-02T06:11:22+00:00"
-        },
-        {
-            "name": "previousnext/nested-set",
-            "version": "0.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/previousnext/nested-set.git",
-                "reference": "d471ba1cab04066d33ff7a76ba616f8afb873570"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/previousnext/nested-set/zipball/d471ba1cab04066d33ff7a76ba616f8afb873570",
-                "reference": "d471ba1cab04066d33ff7a76ba616f8afb873570",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/dbal": "~2.5"
-            },
-            "require-dev": {
-                "drupal/coder": "~8.0",
-                "pear/console_table": "^1.3",
-                "phpunit/phpunit": "~4.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "PNX\\NestedSet\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Kim Pepper",
-                    "email": "kim@pepper.id.au"
-                }
-            ],
-            "description": "A PHP Doctrine DBAL implementation for Nested Sets.",
-            "time": "2017-08-16T10:05:11+00:00"
         },
         {
             "name": "psr/container",
@@ -10807,7 +10256,6 @@
         "drupal/daterange_compact": 20,
         "drupal/dropzonejs": 15,
         "drupal/entity_browser_enhanced": 5,
-        "drupal/entity_hierarchy": 15,
         "drupal/geocoder": 10,
         "drupal/geocoder_ajax_prepopulate": 10,
         "drupal/geofield": 10,
@@ -10816,8 +10264,6 @@
         "drupal/leaflet_more_maps": 15,
         "drupal/name": 5,
         "drupal/page_manager": 10,
-        "drupal/personas": 10,
-        "drupal/profile": 5,
         "drupal/redhen": 20,
         "drupal/require_on_publish": 10,
         "drupal/reverse_entity_reference": 20,
