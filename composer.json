@@ -36,6 +36,7 @@
         "drupal/core": "~8.5.6",
         "drupal/daterange_compact": "^1.0@dev",
         "drupal/dropzonejs": "^2.0@alpha",
+        "drupal/entity": "1.0-beta4",
         "drupal/entity_browser_enhanced": "^1.0@RC",
         "drupal/geocoder": "^2.0@beta",
         "drupal/geocoder_ajax_prepopulate": "^1.0@beta",
